@@ -1,6 +1,8 @@
 
 Posted to Github in May 2016
 
+Website and contact info updated.
+
 =============================================================
 
 RFSGUI 2.2: 11-09-2005
@@ -121,7 +123,7 @@ Windows XP x64 on an NTFS partition; two test ReiserFS partitions.
 
 --- Original "rfstool"
 
-1. rfstool can be found at http://p-nand-q.com/e/reiserfs.html
+1. rfstool can be found at http://p-nand-q.com/download/rfstool/index.html
 2. I've included the version 0.14 sourcetree modified for my use,
 and I've commented where I've made modifications to handle bugs
 I've found, or things I put in to support my program.
@@ -138,7 +140,7 @@ Microsoft C++ compiler that comes with the 2003 SP1 SDK available
 The original RFSTOOL uses the GNU "GPL," and so does this
 program, as it is a "derived work." It is free to distribute
 with source code, and any code derived from it must be
-accompanied by this code. Details are in COPYING.TXT.
+accompanied by this code. Details are in LICENSE.
 
 --- Contact Information
 
