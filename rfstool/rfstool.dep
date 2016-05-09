@@ -1,0 +1,70 @@
+# Microsoft Developer Studio Generated Dependency File, included by rfstool.mak
+
+.\gtools.cpp : \
+	".\gtools.h"\
+	
+
+.\pdrive95.cpp : \
+	"..\rawio32\RAWIO32.h"\
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\pdrive95.h"\
+	".\physicaldrive.h"\
+	
+
+.\pdrivefile.cpp : \
+	"..\rawio32\RAWIO32.h"\
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\pdrive95.h"\
+	".\pdrivefile.h"\
+	".\physicaldrive.h"\
+	".\reiserfs.h"\
+	
+
+.\pdrivent.cpp : \
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\pdrivent.h"\
+	".\physicaldrive.h"\
+	".\reiserfs.h"\
+	
+
+.\physicaldrive.cpp : \
+	"..\rawio32\RAWIO32.h"\
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\pdrive95.h"\
+	".\pdrivent.h"\
+	".\physicaldrive.h"\
+	".\reiserfs.h"\
+	
+
+.\precomp.cpp : \
+	".\gtools.h"\
+	".\precomp.h"\
+	"c:\program files\microsoft sdk\include\basetsd.h"\
+	"c:\program files\microsoft sdk\include\guiddef.h"\
+	"c:\program files\microsoft sdk\include\propidl.h"\
+	"c:\program files\microsoft sdk\include\reason.h"\
+	"c:\program files\microsoft sdk\include\stralign.h"\
+	"c:\program files\microsoft sdk\include\tvout.h"\
+	"c:\program files\microsoft sdk\include\winefs.h"\
+	
+
+.\reiserfs.cpp : \
+	"..\rawio32\RAWIO32.h"\
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\pdrive95.h"\
+	".\pdrivefile.h"\
+	".\physicaldrive.h"\
+	".\reiserfs.h"\
+	
+
+.\rfstool.cpp : \
+	".\gtools.h"\
+	".\ntdiskspec.h"\
+	".\physicaldrive.h"\
+	".\reiserfs.h"\
+	

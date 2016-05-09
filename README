@@ -1,0 +1,147 @@
+
+Posted to Github in May 2016
+
+=============================================================
+
+RFSGUI 2.2: 11-09-2005
+RFSGUI 2.0: 05-02-2005
+RFSGUI 1.4: 01-10-2005
+RFSGUI 1.3: 06-20-2004
+RFSGUI 1.2: 11-13-2003
+RFSGUI 1.1: 10-01-2003
+RFSGUI 1.0: 07-13-2003
+
+--- Premise & History
+
+In May 2003, I was looking for a program to handle ReiserFS
+partitions in Windows XP: I had installed Mandrake 9.1 &
+wanted to be able to access files saved on that part of the
+hard drive while using XP, since my XP partition was NTFS
+& could not be written to in Linux safely. Gerson Kurz had
+published "rfstool," a GPL command-line ReiserFS utility that
+could read/copy directories & files. I lost my job fixing
+computers earlier in the month, and wanted to develop more
+of my nascent programming skills: I had yet to make a
+serious project in Visual C++, despite years of interest.
+I gathered together all the reference material I could,
+searched the Internet for advice, and spent most of a week
+coming up with versions 0.1 & 0.8 of this program: I figured
+to go ahead & call my second release 0.8, since it still has
+a bug or two, but is more or less what I wanted to create.
+
+A month after 0.8 (May 2003), I went back over to clean up
+my codebases, and figured out the two main tweaks for 0.9:
+you could properly access the root folder now, and you could
+enable & disable recursion for directory copies. 1.0 finishes
+this work with partition-changing support: you can use the
+information in the "Partition Dump" to switch between different
+ReiserFS filesystems.
+
+1.1 sets all copied files to read/write access & adds a program
+icon.
+
+1.2 tries to make use of the new "symlink" support in rfstool 0.14.
+
+1.3 is compiled with SP6 of Visual C++ 6.0, and implements a
+vertically-resized listbox.
+
+1.4 provides for comboxbox selection of available partitions,
+and for the saving of files to default filenames in a given
+directory. Also reverted back to VC++ SP5.
+
+2.0 is an attempt to remove unnecessary code & to become 64-bit
+compatable. Depending on the build environment, a 32-bit or 64-bit
+EXE is generated.
+
+2.2 is a bug cleanup version that removes the date/time display
+error from the 64-bit build, and fixes the partition MB count in
+the "Partition Info" function.
+
+--- Installation
+
+"rfsgui" is based on "rfstool," but does NOT require it.
+This release contains an EXE, a DLL, and a source folder.
+The contents of this release may be put in any folder you
+(the user) may desire. If you don't need the source folder,
+it may be deleted. The program "may" work on older versions
+of Windows, but it is designed to work under Windows 2000,
+XP, 2003, etc. You should probably have local "Administrator"
+rights in 2000, XP, etc.
+
+--- Use
+
+1. The interface is designed to be rather intutive: I should
+   not need to explain how to use it. Just remember that if
+   you're using any "dump" reports, or copying a file, to
+   have a proper filename in the "target" box. It should warn
+   you if this is not the case. :)
+
+2. In this program, you can...
+
+   a. Click on a filename & view its properties.
+   b. Double-click on a directory name & access that directory.
+   c. Manually-specify path names to list or copy.
+      If none is specified, it will use the original filename. 
+   d. Copy files & directories recursively.
+   e. Get a copy of the partition tree.
+      Saves as "dumptree.txt" if no target filename is given.
+   f. Get a list of partitions on the local hard drive.
+      Saves as "dumpinfo.txt" if no target filename is given.
+   g. Select available partitions (logical drives) from a list.
+
+3. In this program, you cannot...
+
+   a. Write to any ReiserFS partition: not designed for it.
+   b. Select multiple files to work on: recursive copying
+      of a directory handles this task.
+
+--- Limitations
+
+1. RFSGUI can handle up to 32767 file entries per directory or
+   subdirectory: this is arbitrary, because < 1% of any
+   (sub)directory in existence has this may files in it, and the
+   Win9x limitation for a listbox is 32767 entries.
+
+2. Path & file name combinations may not exceeed 512
+   characters in length. This is calculated by having a path
+   name of 256 characters + a filename of 256 characters.
+
+3. The total amount of accessable partitions is 8 drives *
+   99 partitions, or 792 logical drives.
+
+4. I do not have Windows Vista beta at this time, but I have
+   gotten a report that the last version's 64-bit build (2.0/2.1)
+   didn't work on it. I fixed the bug I knew was in that build, but
+   I am not sure if that caused the failure or not. The 32-bit build
+   worked fine on that system according to the user.
+
+--- Tested on....
+
+Windows XP x64 on an NTFS partition; two test ReiserFS partitions.
+
+--- Original "rfstool"
+
+1. rfstool can be found at http://p-nand-q.com/e/reiserfs.html
+2. I've included the version 0.14 sourcetree modified for my use,
+and I've commented where I've made modifications to handle bugs
+I've found, or things I put in to support my program.
+
+--- Build statistics
+
+Both 32-bit & 64-bit builds are compiled with the version 14
+Microsoft C++ compiler that comes with the 2003 SP1 SDK available
+@ http://www.microsoft.com. Both builds are set with
+"Maximize Speed" & "Optimize for Windows" flags.
+
+--- License
+
+The original RFSTOOL uses the GNU "GPL," and so does this
+program, as it is a "derived work." It is free to distribute
+with source code, and any code derived from it must be
+accompanied by this code. Details are in COPYING.TXT.
+
+--- Contact Information
+
+Michael Adams
+Email:        unquietwiki@gmail.com
+Website:      unquietwiki.com
